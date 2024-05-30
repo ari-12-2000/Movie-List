@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from "react";
-import { Box, CircularProgress, Typography } from "@mui/material";
+import { Box, CircularProgress, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import MovieItem from "./MovieItem";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,14 +44,22 @@ const Movies = () => {
   const sortedMovies = showMovies.sort((a, b) => b.rating - a.rating);
 
   return (
-    <Box className="p-2  w-full flex flex-col m-auto items-center max-w-2xl">
-      <Typography
-        className="p-4 w-full max-w-2xl bg-[#900C3F] text-white text-center uppercase"
-        variant="h4"
+    <Box className="p-2 w-full flex flex-col items-center border-2">
+      <Box
+        className="bg-gradient-to-r from-blue-500 to-purple-700 text-white text-center p-8 rounded-lg mb-4 w-full md:w-3/5"
+        sx={{ boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}
       >
-        Unleash the magic of cinema
-      </Typography>
-      
+        <Typography variant="h4" mb={2}>
+          Unleash the magic of cinema
+        </Typography>
+        <Typography variant="subtitle1" mb={4}>
+          Discover the latest and greatest movies of all time.
+        </Typography>
+        <Button variant="contained" color="secondary">
+          Explore Now
+        </Button>
+      </Box>
+    
       {sortedMovies.map((movie) => (
         <MovieItem
           key={movie.id}
@@ -62,7 +70,7 @@ const Movies = () => {
           favourite={movie.favourite}
         />
       ))}
-     
+    
     </Box>
   );
 };
