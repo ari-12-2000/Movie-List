@@ -12,21 +12,21 @@ const MovieItem = ({ title, url, rating, handleFavourite, favourite }) => {
 
   return (
     <div
-      className="m-6 w-full max-w-2xl h-auto rounded-lg shadow-lg hover:shadow-xl overflow-hidden flex flex-col p-2 bg-gray-50 cursor-pointer"
+      className="m-6 w-full max-w-2xl h-auto rounded-lg shadow-lg hover:shadow-xl overflow-hidden flex flex-col p-4 bg-gray-50 cursor-pointer"
       onClick={handleMovieClick}
     >
-      <div className="p-4 flex bg-white rounded-t-lg">
+      <div className="flex justify-between max-sm:flex-col max-sm:items-center">
         <h5 className="text-xl font-bold">{title}</h5>
-        {rating && <p className="text-gray-600 ml-auto">{rating} ⭐</p>}
+        {rating && <p className="text-gray-600 max-sm:mt-2">{rating} ⭐</p>}
       </div>
 
-      <div className="p-4 flex flex-col items-center md:flex-row bg-white rounded-b-lg">
+      <div className="flex mt-3 flex-col items-center md:flex-row max-sm:text-xs">
         <p className="font-bold">IMDB:</p>
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline ml-2"
+          className="text-blue-500 hover:underline ml-2 max-sm:mt-2"
           onClick={(e) => e.stopPropagation()} // Prevent opening the URL twice
         >
           {url}

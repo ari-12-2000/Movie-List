@@ -44,9 +44,9 @@ const Movies = () => {
   const sortedMovies = showMovies.sort((a, b) => b.rating - a.rating);
 
   return (
-    <Box className="p-2 w-full flex flex-col items-center border-2">
+    <Box className=" p-2 w-full flex flex-col items-center border-2">
       <Box
-        className="bg-gradient-to-r from-blue-500 to-purple-700 text-white text-center p-8 rounded-lg mb-4 w-full md:w-3/5"
+        className="bg-gradient-to-r from-blue-500 to-purple-700 text-white text-center p-8 rounded-lg mb-4 w-full lg:w-3/5"
         sx={{ boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}
       >
         <Typography variant="h4" mb={2}>

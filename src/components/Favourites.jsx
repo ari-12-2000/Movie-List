@@ -41,9 +41,9 @@ const Favourites = () => {
   }
 
   return (
-    <Box className="p-4 w-full max-w-2xl rounded-lg flex flex-col items-center m-auto">
+    <Box className="p-4 w-full max-w-2xl rounded-lg flex flex-col items-center m-auto ">
       <Typography className="flex items-center uppercase" variant="h4">
-        <StarIcon className="mr-1" /> Favourites
+        <StarIcon className="mr-1 text-yellow-400" /> Favourites
       </Typography>
       {favouriteMovies.map((movie) => (
         <MovieItem
