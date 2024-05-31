@@ -68,7 +68,7 @@ const Header = () => {
             aria-label="open drawer"
             edge="start"
             onClick={toggleDrawer}
-            sx={{ mr: 2, display: { sm: "none" } }} // Hide the hamburger menu on medium screens and above
+            sx={{ mr: 2, display: { sm: "none" } }} // Hide the hamburger menu on tablet screens and above
           >
             <MenuIcon />
           </IconButton>
