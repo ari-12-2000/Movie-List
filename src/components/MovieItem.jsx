@@ -37,7 +37,7 @@ const MovieItem = ({ title, url, rating, handleFavourite, favourite }) => {
             handleFavourite();
           }}
           className={`${
-            location.pathname === "/T" &&
+            location.pathname === "/" &&
             !favourite &&
             "bg-gray-300 hover:bg-gray-400"
           } rounded-full mt-2 md:mt-0 md:ml-auto p-1`}
