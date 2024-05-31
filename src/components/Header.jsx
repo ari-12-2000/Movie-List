@@ -86,7 +86,7 @@ const Header = () => {
             anchor="left" // Start the Drawer from the left side
             open={isDrawerOpen}
             onClose={toggleDrawer}
-            sx={{ width: 250 ,"& .Mui-selected": { backgroundColor: "black", color: "white" }}}
+            sx={{ width: 250 ,"& .Mui-selected": { backgroundColor: "#000000", color: "white" }}}
           >
             <List>
               <ListItem
